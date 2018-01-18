@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WebServicesCidades.Models;
 
@@ -8,6 +9,7 @@ namespace WebServicesCidades.Controllers
     public class PrimeiraController:Controller
     {
         Cidades cidade = new Cidades();
+        DAOCidades dao = new DAOCidades();
         [HttpGet]
         public IEnumerable<Cidades> Get()
         {
