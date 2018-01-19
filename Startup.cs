@@ -15,6 +15,7 @@ namespace WebServicesCidades
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //Adicionando o serviço de MVC para usar rotas e controlador
             services.AddMvc();
         }
 
@@ -26,6 +27,7 @@ namespace WebServicesCidades
                 app.UseDeveloperExceptionPage();
             }
 
+            //indicar para o app usar o MVC
             app.UseMvc();
 
             app.Run(async (context) =>
